@@ -3,10 +3,10 @@
 program napisany na potrzeby projektu książki pe
 napisanny w processingu
 
-## instalation processing
-na początek musimy zainatalować processing 
-## external liberys
-## run project
+## instalation
+### processing
+### external liberys
+### run project
 
 ## keybord shortcuts
 
