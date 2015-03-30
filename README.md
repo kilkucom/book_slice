@@ -5,10 +5,7 @@ keybord shortcuts
 | name | key |
 | :--- | :-- |
 | [ Shift ] + [ r ] | reset workspace and zoom |
-| [ Space ] | move/ofset workspace |
-| [ h ] | move/ofset workspace |
-| [ H ] | move/ofset workspace |
-| [ LMB ] | move/ofset workspace |
+| [ Space ] or [ h ] or [ H ] + [ LMB ] | move/ofset workspace |
 
 
 
