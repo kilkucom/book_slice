@@ -4,9 +4,9 @@ program napisany na potrzeby projektu książki pe
 napisanny w processingu
 
 ## instalation
-###  * processing
-###  * external liberys
-###  * run project
+### * run project
+### * processing
+### * external liberys
 
 ## keybord shortcuts
 
@@ -20,6 +20,8 @@ external liberys
 import geomerative.*;
 import processing.pdf.*;
 import controlP5.*;
+
+` https://github.com/kilkucom/book_slice.git `
 
 
 160
