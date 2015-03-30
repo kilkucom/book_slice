@@ -4,9 +4,9 @@ program napisany na potrzeby projektu książki pe
 napisanny w processingu
 
 ## instalation
-### processing
-### external liberys
-### run project
+###  * processing
+###  * external liberys
+###  * run project
 
 ## keybord shortcuts
 
