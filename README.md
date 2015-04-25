@@ -18,7 +18,7 @@ in window that will popup, type down:
 
 ### * Run project
 - fork project from git or download the project and unzip it
-- open Processing window and go to ** File/Open **
+- open Processing window and go to *File/Open*
 navigate to a folder with your downloaded project and open "book_slice.pde" file
 - press Play button on top left corner of Processing window
 - or press
