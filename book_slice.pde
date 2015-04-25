@@ -16,6 +16,7 @@ Gui gui;
 
 boolean ex = false;
 boolean info = false;
+boolean first_loop = true;
 
 
 // int first_step_size = 0;
@@ -90,6 +91,12 @@ void setup(){
 
 void draw(){
 	background(color_bg);
+
+	if(first_loop == true){
+		export_height = int(bbox[2].y);
+
+		first_loop = false;
+	}
 
 
 	int(export_wight * 0.8);
@@ -186,7 +193,7 @@ void draw(){
 	    offset.y = 0;
 		beginRecord(pdf);
 	}
-	rect(0, 0, 100, 100);
+	// rect(0, 0, 100, 100);
 
 	if( intersection.size() != 0){
 		simple_extrude(intersection,extrude_size);
