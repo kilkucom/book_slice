@@ -1,5 +1,37 @@
 void keyPressed(){
 
+  if ( key == 's' ) {
+    println("[ Save ]");
+    println(colect_verb_to_save);
+    saveStrings("save.txt", file_save);
+    println("[ Save Done !!!]");
+  }
+
+  
+  if ( key == 'l' ) {
+    println("[ Load ]");
+    String verb_to_load[] = loadStrings("save.txt");
+    page_nr = int(verb_to_load[0]);
+    extrude_size = float(verb_to_load[1]);
+    export_wight = int(verb_to_load[2]); 
+    export_height = int(verb_to_load[3]);
+    
+    for (int i = 0 ; i < verb_to_load.length; i++) {
+      println(verb_to_load[i]);
+    }
+
+    println("[ Load Done !!!]");
+  }
+
+
+  if ( key == '9') {
+    extrude_size--;
+  }
+
+  if ( key == '0') {
+    extrude_size++;
+  }
+
   if ( key == 'R' || key == 'r' ) {
     zoom = 1;
     offset.x = 0;
@@ -18,12 +50,40 @@ void keyPressed(){
     zoom -= 0.1;
   }
 
+  if ( key == 'E' || key == 'e' ) {
+    ex = true;
+  }
+
+  if ( keyCode == LEFT ) {
+    clip_counter--;
+  }
+
+  if ( keyCode == RIGHT ) {
+    clip_counter++;
+  }
+
+  if ( keyCode == UP ) {
+    page_nr++;
+  }
+
+  if ( keyCode == DOWN ) {
+    page_nr--;
+  }
+
+  if ( key == 'i' ) {
+    info = true;
+  }
+  
+
 }
 
 void keyReleased() {
 	if (key == 'h' || key == 'H' || key == ' ') {
 		drag = false;
 	}
+  if ( key == 'i' ) {
+    info = false;
+  }
 }
 
 void mousePressed() {
