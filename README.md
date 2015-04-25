@@ -22,28 +22,41 @@ and window that will popup,
 	* run skeche by pressing Play button on top left corner of Processing window
 
 
-## How it works
+## How to preper the file
 this is a very simple project for now :)
 you nead to preper your file to slice
-first fing you neead kieap in minnd
- * do not use atributs
+ther is fiew fing you neead to kieap in minnd
+ * do not use atributs like stoke alweis convert **stroke to path**
+fings like color, gradient any efects like blur or glow well be ignor or my by cosw of cras and wrong interpretation
+
 ![alt tag](https://github.com/kilkucom/book_slice/blob/master/matz/infogrPE1.png)
 
-		you need to place the file, you want to work with, in Data directory and name it “file.svg”
-    before you do this, prepare your .svg file in your favourite graphic application
-    1. do not use any stroke attributes - if you use stroke, convert them into the shape
-    2. shapes should not overlap each other - if they do so, fix it
-    3. when file is ready, save it to .svg
+ * do not owerlap shapes add them to gether or trim color while by ignor anyway
+tray to keap final file as kleen as it posyble
 
-    keep in mind
-    this program is in beta stadium, so for now its doesn't support colors - the final file will contain only the black shapes
-    program default units is px
-    export only to *.pdf  
+![alt tag](https://github.com/kilkucom/book_slice/blob/master/matz/infogrPE2.png)
 
-## Keyboard shortcuts
+ * you need to place the file, you want to work with, in **data/** directory and name it **“file”** with extension **.svg**
+ * keep in mind this program is in beta stadium, the final files will contain only the black shapes
+ * program default units is px
+ * export only to **.pdf**
+ * after you run skech pres `i` to se shortcuts
 
-| nxame | key |
-| :--- | :-- |
-| [ Shift ] + [ r ] | reset workspace and zoom |
-| [ Space ] or [ h ] or [ H ] + [ LMB ] | move/offset workspace |
+## How its work
+program simply load the file and divide it in to the number of slice
+after thet slises they ar extrudet an redy to esport
+after run the skech you will see your file loadet
+on the left top corner you can ajust number of pages
+size of extrusion and export area with is bay defolut set to size of you file bounding box
+you can olsow save curent setings and load them `s` to save `l` to load,
+using `LEFT` and `RUGHT` arrow you can change position of cliper its good idea to play a litle with yor garic to se if ther is any problem with the loadtet fill
+its posible you well need to make som ajustemst in the grfic
+and finaly press `e` to export
+after the export ist redy you well finde your files in the project directory under **export/**
+folder
+
+be wery cerful with this program and do not send file to printer befor test printing
+good luck
+
+
 `https://github.com/kilkucom/book_slice.git `
