@@ -60,7 +60,7 @@ void setup(){
 
 	// frameRate(25);
 
-	font = loadFont("CourierNewPS-ItalicMT-12.vlw");
+	// font = loadFont("CourierNewPS-ItalicMT-12.vlw");
 	info_screen = loadShape("lgendaBookSlice.svg");
 
 	if( frame != null){
