@@ -1,62 +1,52 @@
 # Book Slice
 
 ### Program written in Processing for the project of the book Patterns of Europe
-został zaprojektowany do ciecia grafiki vektorowej na potrzeby umieszczenia jej na
-grzbiecie książki use of this program
+The program is designed to slice vector graphic in order to put it on sides of a book block.
+
 ## Installation
 1. **Download Processing**
 	    https://processing.org/download/
 
 2. **Install External libraries**
-	* run Processing
-	* select **Sketch/Import Library/Add Library...**
-and window that will popup,
-	* type down and press install:
+	* Run Processing
+	* Select **Sketch/Import Library/Add Library...**
+and in window that will popup,
+	* Type down and press install:
 		* Geomerative
 		* ControlP5
 
 3. **Run project**
-	* pull project from git or download the project and unzip it
-	* open Processing window and go to **File/Open...**
-	* navigate to a folder with your downloaded project and open *book_slice.pde*
-	* run skeche by pressing Play button on top left corner of Processing window
+	* Pull project from git or download the project and unzip it
+	* Open Processing window and go to **File/Open...**
+	* Navigate to a folder with your downloaded project and open *book_slice.pde*
+	* Run sketch by pressing Play button on the top left corner of Processing window
 
 
-## How to preper the file
-this is a very simple project for now :)
-you nead to preper your file to slice
-ther is fiew fing you neead to kieap in minnd
- * do not use atributs like stoke alweis convert **stroke to path**
-fings like color, gradient any efects like blur or glow well be ignor or my by cosw of cras and wrong interpretation
+## How to prepare the vector file
+This is a very simple project for now :)
+While preparing a vector graphic file, which you want to place on sides of your book block, you need to keep in mind a few things.
+ * Do not use stroke attribute! Always convert **stroke to path.**
+All attributes (e.g. color, gradient) and effects (e.g. blur, glow) will be ignored and may cause errors or crash of the program.
 
 ![alt tag](https://github.com/kilkucom/book_slice/blob/master/matz/infogrPE1.png)
 
- * do not owerlap shapes add them to gether or trim color while by ignor anyway
-tray to keap final file as kleen as it posyble
+ * Do not overlap shapes! All overlapping objects convert to one shape (Pathfinder -> Add) or separate shapes (Pathfinder -> Trim). Remember that color will be ignored anyway. Try to keep the final file as clean as possible.
 
 ![alt tag](https://github.com/kilkucom/book_slice/blob/master/matz/infogrPE2.png)
 
- * you need to place the file, you want to work with, in **data/** directory and name it **“file”** with extension **.svg**
- * keep in mind this program is in beta stadium, the final files will contain only the black shapes
- * program default units is px
- * export only to **.pdf**
- * after you run skech pres `i` to se shortcuts
+ * Place the final vector file in **data/** directory and name it **“file”** with extension **.svg**
+ * Keep in mind that the final files will contain only the black shapes (this program is in beta stadium)
+ * Program default units is px
+ * Export only to **.pdf**
+ * After you run sketch, press `i` to see shortcuts
 
-## How its work
-program simply load the file and divide it in to the number of slice
-after thet slises they ar extrudet an redy to esport
-after run the skech you will see your file loadet
-on the left top corner you can ajust number of pages
-size of extrusion and export area with is bay defolut set to size of you file bounding box
-you can olsow save curent setings and load them `s` to save `l` to load,
-using `LEFT` and `RUGHT` arrow you can change position of cliper its good idea to play a litle with yor garic to se if ther is any problem with the loadtet fill
-its posible you well need to make som ajustemst in the grfic
-and finaly press `e` to export
-after the export ist redy you well finde your files in the project directory under **export/**
-folder
+## How does it work
+Program simply loads the vector file and divides contained graphic into slices. Each slice is extruded and prepared for export.
+After runnning the sketch, you will see your vector file loaded. On the top left corner of the window you can adjust the number of pages, size of extrusion and export area, which is, by default, set to size of your file's bounding box. You may also save current settings with `s` and load them with `l` button. By using `LEFT` and `RIGHT` arrow, you can change position of the clipper. It's a good idea to check carefully your graphic, to see if there is any problem with the loaded file - it is possible that you will need to make some adjustments in the graphic. When everything is ready, press `e` to export. You will find exported files under the project directory in **export/** folder.
 
-be wery cerful with this program and do not send file to printer befor test printing
-good luck
+Remember: this is a beta version of the program and you should be  carefull while using it. We strongly recommend to make a test printing before sending final files to a printing house.
+
+Good luck
 
 
 `https://github.com/kilkucom/book_slice.git `
