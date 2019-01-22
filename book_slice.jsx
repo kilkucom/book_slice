@@ -86,12 +86,15 @@ for(i=0; i < nr-1; i++){
 
 var idoc = app.activeDocument;
 
-// var artboard = doc.artboards[0];
+var artboard = doc.artboards[0];
 // idoc.artboards.artboardRect = [50, 50, 50, 50];
+for(i=0; i < ( nr - 1 ); i++){
+    var ABrect = artboard.artboardRect;
+    var newAB = doc.artboards.add(ABrect);
+    doc.artboards[i].artboardRect = [doc.artboards[0].artboardRect[0]*(i+1), doc.artboards[0].artboardRect[1], doc.artboards[0].artboardRect[2]*(i+1), doc.artboards[0].artboardRect[3]];
+
+}
 //
-// var ABrect = artboard.artboardRect;
-//
-// var newAB = doc.artboards.add(ABrect);
 
 
 
