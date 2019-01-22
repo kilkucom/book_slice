@@ -20,4 +20,6 @@ examples:
 
 
 # Book Slice
+
+Adobe Illustrator script written in JavaScript designed to slice vector graphic in order to put it on sides of a book block.
 in progrss !
