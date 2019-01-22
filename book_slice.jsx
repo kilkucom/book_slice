@@ -11,7 +11,7 @@ var objSelected = doc.selection;
 // UI to set number of slises
 // ==================================================
 nr = Number(prompt( "Ilosc składek = ", 9));
-var abOffset = Number(prompt("Ustaw artbord offset = ", 10));
+var abOffset = Number(prompt("Ustaw artbord offset = ", 200));
 
 
 // Expand all selected object one by one
@@ -44,10 +44,11 @@ var mainGroup = workGroup.geometricBounds;
 workGroup.translate(mainGroup[0]*-1,mainGroup[1]*-1);
 
 
-
+var mainGroup = workGroup.geometricBounds;
 // add rectangle for cliping mask
+alert(workGroup.geometricBounds);
 // ================================================== !!!
-workGroup.pathItems.rectangle ( 0, 0, 5, 500);
+workGroup.pathItems.rectangle (0, 0, mainGroup[2]/nr, mainGroup[3]*-1);
 
 
 
@@ -61,6 +62,8 @@ var firstAbx = abBounds[0] - abBounds[0];
 var firstAby = abBounds[1] - abBounds[1];
 var firstAbw = width/nr;
 var firstAbh = height;
+
+
 doc.artboards[0].artboardRect = [firstAbx, firstAby, firstAbw, firstAbh];
 
 
@@ -90,7 +93,11 @@ for(i=0; i < nr-1; i++){
         docRef.layers.getByName(i.toString()).move(docRef.layers[n-x], ElementPlacement.PLACEAFTER);
     }
 }
-//
+
+
+
+
+
 
 // Arbord setup //
 // ==================================================
@@ -125,14 +132,23 @@ for( i=0; i <artbord.length; i++ ){
 // ==================================================
 
 // for(i=0; i , )
-alert("Layers nr = " + app.activeDocument.layers.length);
-alert("aa = " + app.activeDocument.layers[0].groupItems[0].geometricBounds);
 
 for(i=0; i < app.activeDocument.layers.length; i++){
      app.activeDocument.layers[i].groupItems[0].translate(abOffset * i, app.activeDocument.layers[0].groupItems[0].geometricBounds[1] );
 }
 
+
+
 MakeclipingMask();
+
+var doc = app.activeDocument;
+
+for(x=0; x < doc.layers.length; x++){
+    var warstwa = doc.layers[x];
+
+    warstwa.groupItems[0].pathItems[0].translate(firstAbw*x,0,true,true);
+
+}
 
 
 // ==================================================
