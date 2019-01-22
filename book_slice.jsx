@@ -7,12 +7,12 @@ by kilku.com / Pafnucy Szarzyński
 
 var doc = app.activeDocument;
 var objSelected = doc.selection;
+var abOffset = 10;
 
 // UI to set number of slises
 // ==================================================
 nr = Number(prompt( "Ilosc składek = ", 9));
-var abOffset = Number(prompt("Ustaw artbord offset = ", 10));
-
+// var abOffset = Number(prompt("Ustaw artbord offset = ", 10));
 
 // Expand all selected object one by one
 // ==================================================
