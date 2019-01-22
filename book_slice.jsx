@@ -82,9 +82,7 @@ for(i=0; i < nr-1; i++){
         docRef.layers.getByName(i.toString()).move(docRef.layers[n-x], ElementPlacement.PLACEAFTER);
     }
 }
-
-
-// var idoc = app.activeDocument;
+//
 
 // Arbord setup //
 // ==================================================
@@ -104,12 +102,27 @@ for(i=1; i < nr; i++){
     newAB.name = "joint " + ( i + 1 );
 };
 
+
+
 // arboard offset by abOffset value //
 // ==================================================
 var artbord = doc.artboards;
 for( i=0; i <artbord.length; i++ ){
     doc.artboards[i].artboardRect = [doc.artboards[i].artboardRect[0] + ( abOffset * i),doc.artboards[i].artboardRect[1], doc.artboards[i].artboardRect[2] + ( abOffset * i),doc.artboards[i].artboardRect[3]];
 };
+
+
+
+// layer offset by abOffset value //
+// ==================================================
+
+// for(i=0; i , )
+alert("Layers nr = " + app.activeDocument.layers.length);
+alert("aa = " + app.activeDocument.layers[0].groupItems[0].geometricBounds);
+
+for(i=0; i < app.activeDocument.layers.length; i++){
+     app.activeDocument.layers[i].groupItems[0].translate(abOffset * i, app.activeDocument.layers[0].groupItems[0].geometricBounds[1] );
+}
 
 
 
