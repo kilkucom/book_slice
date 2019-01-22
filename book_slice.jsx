@@ -26,6 +26,7 @@ for (i=0; i < objSelected.length; i++){
 // create and re-name group
 // add objSelected (selected object ) to created group
 // ==================================================
+
 var objSelected = doc.selection;
 var workGroup = app.activeDocument.groupItems.add();
 workGroup.name = "nzawa_Grupy" + 1;
@@ -35,11 +36,18 @@ for (i=0; i < objSelected.length; i++){
 }
 
 
+// var objSelected = doc.selection;
 
 // offset group to top left corner
 // ==================================================
 var mainGroup = workGroup.geometricBounds;
 workGroup.translate(mainGroup[0]*-1,mainGroup[1]*-1);
+
+
+
+// add rectangle for cliping mask
+// ================================================== !!!
+workGroup.pathItems.rectangle ( 0, 0, 5, 500);
 
 
 
@@ -124,6 +132,7 @@ for(i=0; i < app.activeDocument.layers.length; i++){
      app.activeDocument.layers[i].groupItems[0].translate(abOffset * i, app.activeDocument.layers[0].groupItems[0].geometricBounds[1] );
 }
 
+MakeclipingMask();
 
 
 // ==================================================
@@ -132,4 +141,30 @@ function expandFile() {
   app.executeMenuCommand("selectall");
   app.executeMenuCommand ('Live Outline Stroke');
   app.executeMenuCommand ('expandStyle');
+}
+
+// ==================================================
+    ///// Cliping Mask Funcion /////
+function MakeclipingMask(){
+    // if(app.documents.length < 1){
+    //     return;
+    // }
+    var doc = app.activeDocument;
+    for(x=0; x < doc.layers.length; x++){
+        var lr = doc.layers[x];
+        for(var i=0; i<lr.groupItems.length; i++){
+            var thisGroup = lr.groupItems[i];
+            doc.selection = null;
+            thisGroup.selected = true;
+            for(var j=0; j<doc.pageItems.length; j++){
+                var thisItem = doc.pageItems[j];
+                if(thisItem.selected){
+                    thisGroup.clipped = true;
+                    // thisItem.clipping = true;
+                    if(thisItem.typename == "PathItem" && thisItem.name == "proofLine"){
+                    }
+                }
+            }
+        }
+    }
 }
