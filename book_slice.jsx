@@ -11,6 +11,7 @@ var objSelected = doc.selection;
 // UI to set number of slises
 // ==================================================
 nr = Number(prompt( "Ilosc składek = ", 9));
+var abOffset = Number(prompt("Ustaw artbord offset = ", 10));
 
 
 // Expand all selected object one by one
@@ -85,18 +86,30 @@ for(i=0; i < nr-1; i++){
 
 // var idoc = app.activeDocument;
 
-
+// Arbord setup //
+// ==================================================
 var artboard = doc.artboards[0];
+var mainAbSize = doc.artboards[0].artboardRect;
 artboard.name = "joint 0";
-for(i=0; i < nr; i++){
+
+var abPosx = mainAbSize[2];
+var abPosy = mainAbSize[1];
+var abPosw = mainAbSize[2];
+var abPosh = mainAbSize[3];
+
+for(i=1; i < nr; i++){
     var ABrect = artboard.artboardRect;
     var newAB = doc.artboards.add(ABrect);
-    doc.artboards[i].artboardRect = [doc.artboards[0].artboardRect[0]*(i+1), doc.artboards[0].artboardRect[1], doc.artboards[0].artboardRect[2]*(i+1), doc.artboards[0].artboardRect[3]];
+    doc.artboards[i].artboardRect = [ abPosx * ( i ), abPosy, abPosw * ( i + 1 ), abPosh ];
     newAB.name = "joint " + ( i + 1 );
+};
 
-}
-//
-
+// arboard offset by abOffset value //
+// ==================================================
+var artbord = doc.artboards;
+for( i=0; i <artbord.length; i++ ){
+    doc.artboards[i].artboardRect = [doc.artboards[i].artboardRect[0] + ( abOffset * i),doc.artboards[i].artboardRect[1], doc.artboards[i].artboardRect[2] + ( abOffset * i),doc.artboards[i].artboardRect[3]];
+};
 
 
 
