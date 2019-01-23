@@ -10,7 +10,7 @@ examples:
 
 <p align="center">
     ![](https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif)
-  <img />
+  <!-- <img /> -->
 </p>
 
 ## Installation
