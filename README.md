@@ -11,9 +11,9 @@ examples:
 <!-- <center>![aa](https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif)</center> -->
 <!-- <center>https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif</center> -->
 
-<p align="center">
+<!-- <p align="center"> -->
 ![BookBok](https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif)
-</p>
+<!-- </p> -->
 
 ## Installation
 - Download `book_bok.jsx`
