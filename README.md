@@ -1,8 +1,6 @@
 # Book Bok
 by kilku.com | Paweł Szarzyński
 
-![](https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif)
-
 Adobe Illustrator script written in JavaScript and tested with Adobe Illustrator CC 2019 23.0.1 (64-bit)  
 The purpose of the script is to automate the process of printing graphics on the spine of the book.  
 examples:  
@@ -10,6 +8,7 @@ examples:
 [The Theatre Under Construction. Travelogue](http://kilku.com/?portfolio=teatr-w-budowie-dziennik-podrozy&id=14)  
 [Platform. East European Performing Arts Companion](http://kilku.com/?portfolio=platform-east-european-performing-arts-companion&id=14)
 
+![](https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif)
 ## Installation
 - Download `book_bok.jsx`
 - Open Adobe Illustrator and select a graphic
