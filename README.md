@@ -1,4 +1,5 @@
 # Book Bok
+by kilku.com | Paweł Szarzyński
 
 Adobe Illustrator script written in JavaScript and tested with Adobe Illustrator CC 2019 23.0.1 (64-bit)  
 The purpose of the script is to automate the process of printing graphics on the spine of the book.  
@@ -22,4 +23,4 @@ examples:
 # Book Slice
 
 Adobe Illustrator script written in JavaScript designed to slice vector graphic in order to put it on sides of a book block.
-in progrss !
+in progress !
