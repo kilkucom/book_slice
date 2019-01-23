@@ -9,7 +9,7 @@ examples:
 [Platform. East European Performing Arts Companion](http://kilku.com/?portfolio=platform-east-european-performing-arts-companion&id=14)
 
 <!-- <center>![aa](https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif)</center> -->
-<center>![Traffic_v01_cam1](https://github.com/szawel/HOU_Share/blob/master/gif/Traffic_v01_cam1.gif)</center>
+<center>https://github.com/kilkucom/book_slice/blob/Illustrator/gif/BookBok.gif</center>
 
 ## Installation
 - Download `book_bok.jsx`
